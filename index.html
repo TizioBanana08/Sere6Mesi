@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- Collegamento al file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 🔒 1. LOGIN PASSWORD -->
+    <div id="login-screen">
+        <div class="login-box">
+            <h2>🕸️ Accesso Riservato 🕸️</h2>
+            <p>Inserisci la parola segreta per accedere:</p>
+            <input type="password" id="password-input" placeholder="Password...">
+            <br>
+            <button onclick="checkPassword()">Sblocca</button>
+            <p id="error-msg" style="color: yellow; display: none;">Ops! Password sbagliata 🕷️</p>
+        </div>
+    </div>
+
+    <!-- 🌐 CONTENUTO SITO -->
+    <div id="main-content">
+        <h1>DODO🩷</h1>
+        <p><i>"6 mesi di noi... E speriamo altrettanti ed infiniti."</i></p>
+
+        <!-- 📸 SEZIONE 1: TIMELINE POLAROID -->
+        <div class="timeline">
+            <div class="polaroid-card">
+                <img src="img/PrimiGiorni.jpeg" alt="Foto 1">
+                <div class="date">28 Gennaio - I primi giorni insieme</div>
+            </div>
+            <div class="polaroid-card">
+                <img src="img/SanVal.jpeg" alt="Foto 2">
+                <div class="date">14 Febbraio - San Valentino</div>
+            </div>
+            <div class="polaroid-card">
+                <img src="img/Viso.jpeg" alt="Foto 2">
+                <div class="date">Il tuo bellissimo viso</div>
+            </div>
+            <div class="polaroid-card">
+                <img src="img/Unicorno.jpeg" alt="Foto 2">
+                <div class="date">Io Unicorno</div>
+            </div>
+            <div class="polaroid-card">
+                <img src="img/FotoPrefe.jpeg" alt="Foto 2">
+                <div class="date">Una delle tue foto più belle</div>
+            </div>
+            <div class="polaroid-card">
+                <img src="img/Waw.jpeg" alt="Foto 2">
+                <div class="date">Quanto sei bella!</div>
+            </div>
+            <div class="polaroid-card">
+                <img src="img/Top.jpeg" alt="Foto 2">
+                <div class="date">Quando ti ho rubato il top...</div>
+            </div>
+            <div class="polaroid-card">
+                <img src="img/Mesiversario.jpeg" alt="Foto 2">
+                <div class="date">25 Aprile - Uno dei pochi mesiversari che abbiamo fatto assieme👀</div>
+            </div>
+            <div class="polaroid-card">
+                <img src="img/Sexy.jpeg" alt="Foto 2">
+                <div class="date">Super sexy</div>
+            </div>
+            <div class="polaroid-card">
+                <img src="img/PrimoBagno.jpeg" alt="Foto 2">
+                <div class="date">Il primo bagnetto nella MIA piscina</div>
+            </div>
+            <div class="polaroid-card">
+                <img src="img/Pupa.jpeg" alt="Foto 2">
+                <div class="date">Hey pupa, mi seduci così</div>
+            </div>
+            <div class="polaroid-card">
+                <img src="img/Cameo.jpeg" alt="Foto 2">
+                <div class="date">Ci sono un po' di cameo in questa foto.</div>
+            </div>
+            <div class="polaroid-card">
+                <img src="img/MoltoSexy.jpeg" alt="Foto 2">
+                <div class="date">Quanto siamo belli amore mio</div>
+            </div>
+        </div>
+
+        <hr style="border-color: var(--spider-red); margin: 40px 0;">
+
+        <!-- ⏱️ SEZIONE 2: CONTATORI -->
+        <h2>I Nostri Numeri</h2>
+        <div class="counters-container">
+            <div class="counter-box">
+                <div class="counter-number" id="days-count">0</div>
+                <div>Giorni Insieme ❤️</div>
+            </div>
+            <div class="counter-box">
+                <div class="counter-number" id="kisses-count">0</div>
+                <div>Bacini Dati 💋</div>
+            </div>
+            <div class="counter-box">
+                <div class="counter-number" id="dates-count">0</div>
+                <div>DODO detti🩷</div>
+            </div>
+        </div>
+
+        <hr style="border-color: var(--spider-red); margin: 40px 0;">
+
+        <!-- 🧩 SEZIONE 3: MEMORY GAME -->
+        <h2>🎮 Sblocca l'ultima sorpresa!</h2>
+        <p>VINCI IL MEMORY PER UN'ULTIMA SORPRESA</p>
+        <div class="memory-grid" id="memory-board"></div>
+    </div>
+
+    <!-- 💌 LETTERA SBLOCCATA -->
+    <div id="letter-modal">
+        <h2 style="color: var(--spider-red);">Buon sesto mesiversario amore mio 🩷</h2>
+        <p>Ciao amore mio, spero ti sia piaciuta questa sorpresa per i nostri sei mesi.<br/>
+        Come al solito mi ritrovo a non sapere mai come iniziare le lettere che ti scrivo, ma alla fine qualcosa lo trovo da scrivere
+        perché tu sei come una musa ed io un poeta, mi basta interpellarti e contemplarti per capire quanto tu sia degna di testi che farebbero invidia
+        a quelli dei poeti più importanti.<br/>
+        Amore mio sono già sei mesi, ma sembra passata un'eternità. Ed è proprio l'eternità che voglio vivere con te, perché tu sei eterna, è impossibile che tu sia reale.<br/>
+        Veramente ogni volta che ti penso, che ti guardo, che ti parlo, che ti bacio, non mi capacito di come qualcuno come te possa esistere davvero. Qual è il tuo segreto?<br/>
+        Lo so io il segreto, è che tu semplicemente sei la mia anima gemella. Non ho mai sentito la connessione che ho con te con nessun'altro, tra noi c'è qualcosa, qualcosa che
+        trascende i confini della realtà e arriva in una dimensione ultra terrena, dove le nostre povere anime danneggiate si sono incontrate e si sono accorte di avere sempre un filo rosso
+        che le teneva assieme. Collegate dall'eternità.<br/>
+        Questo siamo noi, la stessa anima divisa in due che ci ha solo messo un tempo enorme per ritrovarsi.<br/>
+        Questi mesi non sono stati sempre rose e fiori, ma abbiamo sempre risolto ed è questo che ci sta facendo stare uniti, risolvere sempre e stare sempre assieme. Non perdiamoci mai ti prego, non voglio immaginare una vita
+        nella quale tu non sia presente, non voglio viverla una vita del genere.<br/>
+        Non posso più stare senza di te, senza la tua presenza, senza i tuoi occhi, sneza il tuo sorriso, senza la tua risata, senza i tuoi interessi, senza che tu sia te, in tutta la tua meravigliosità.<br/>
+        Amore mio ti voglio chiedere scusa e grazie allo stesso tempo. Scusa perché ogni tanto ti faccio passare le pene dell'inferno, mi dispiace essere così non ti meriti tutto questo, ma invece ti dico grazie perché mi sei stata e mi stati
+        sempre accanto, senza abbandonarmi mai, nonostante io abbia fatto delle cose da pessimo fidanzato.<br/>
+        Grazie, grazie, grazie, grazie amore mio. Sei la persone più perfetta che esista.<br/>
+        Ti amo veramente tanto amore mio, infinitamente, più di quanto sia calcaolabile, più di tutto quanto, più di quanto abbia mai amato qualsiasi cosa in vita mia.<br/>
+        Scusami anche per tutte le paranoie che mi faccio amore, è che ho paura di perderti, ma perché ho paura di perdere qualsiasi cosa e io non so perché ho così tanta paura, paura di tutto, ma giuro che riuscirò a migliorare anche in questo.
+        Grazie per dirmi sempre tutto, così da poterne parlare assieeme sempre, grazuie veramente amore.<br/>
+        Sei veramente incredibile, magari essere come te.
+        Spero che tutto questo ti sia piaciuto in caso dimmelo amore mio, non ho veramente parole per descrivere quanto io sia fortunato a stare con te e che tu mi ami, grazie amore, grazie di tutto quanto Sere.<br/>
+        DODO.<br/>🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷
+        🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷
+        🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷<br/>
+        MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH
+    MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH </p>
+        <button onclick="closeModal()">Chiudi</button>
+    </div>
+
+    <!-- Collegamento al file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

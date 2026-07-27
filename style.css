@@ -1,4 +1,12 @@
-/* CSS GENERALE E TEMA SPIDER-MAN */
+/* ==========================================
+   CSS GENERALE E TEMA SPIDER-MAN
+   ========================================== */
+
+/* Resetta i margini e attiva il calcolo corretto delle dimensioni */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 :root {
     --spider-red: #e62429;
     --spider-blue: #002147;
@@ -8,6 +16,7 @@
 
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--spider-dark);
     color: white;
@@ -24,33 +33,44 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    padding: 15px;
 }
 
 .login-box {
     background: rgba(230, 36, 41, 0.1);
     border: 2px solid var(--spider-red);
-    padding: 30px;
+    padding: 30px 20px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(230, 36, 41, 0.5);
+    width: 100%;
+    max-width: 380px;
 }
 
 input[type="password"] {
-    padding: 10px;
+    padding: 12px;
     border-radius: 5px;
     border: 1px solid var(--spider-red);
     margin-top: 10px;
     text-align: center;
+    width: 80%;
+    font-size: 1rem;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: var(--spider-red);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 15px;
     font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.98);
 }
 
 button:hover { 
@@ -60,7 +80,9 @@ button:hover {
 /* CONTENUTO PRINCIPALE */
 #main-content { 
     display: none; 
-    padding: 20px; 
+    padding: 20px 15px; 
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* SEZIONE 1: TIMELINE POLAROID */
@@ -88,21 +110,21 @@ button:hover {
 }
 
 .polaroid-card:hover { 
-    transform: scale(1.05) rotate(0deg); 
+    transform: scale(1.03) rotate(0deg); 
 }
 
 .polaroid-card img {
     width: 100%;
-    max-height: 700px;
+    max-height: 500px;
     object-fit: cover;
     border-radius: 2px;
 }
 
 .polaroid-card .date {
-    margin-top: 10px;
+    margin-top: 12px;
     font-weight: bold;
     color: var(--spider-red);
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 /* SEZIONE 2: CONTATORI */
@@ -111,6 +133,7 @@ button:hover {
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 50px 0;
+    gap: 15px;
 }
 
 .counter-box {
@@ -118,12 +141,13 @@ button:hover {
     border: 2px solid var(--spider-red);
     padding: 20px;
     border-radius: 10px;
-    margin: 10px;
-    min-width: 150px;
+    flex: 1 1 140px;
+    min-width: 130px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .counter-number {
-    font-size: 2.5em;
+    font-size: 2.3em;
     font-weight: bold;
     color: var(--spider-red);
 }
@@ -133,52 +157,158 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    max-width: 400px;
-    margin: 20px auto;
+    width: 100%;
+    max-width: 380px;
+    margin: 25px auto;
 }
 
 .card {
-    width: 80px; 
-    height: 80px;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Mantiene la carta perfettamente quadrata su tutti i telefoni */
     background-color: var(--spider-blue);
     border: 2px solid var(--spider-red);
-    border-radius: 10px;
+    border-radius: 8px;
     display: flex; 
     justify-content: center; 
     align-items: center;
-    font-size: 2em; 
+    font-size: 1.8em; 
     cursor: pointer; 
-    border-radius: 8px;
+    user-select: none;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 .card.flipped { 
     background-color: white; 
 }
 
-/* MODALE LETTERA */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Taglia l'immagine per riempire il quadrato senza distorcerla */
+    border-radius: 6px;
+}
+
+/* 💌 MODALE LETTERA (OTTIMIZZATA PER CELLULARI) */
 #letter-modal {
     text-align: left;
     display: none;
     position: fixed;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    background: #fff; 
+    background: #ffffff; 
     color: #222;
     padding: 30px; 
-    border-radius: 15px;
+    border-radius: 18px;
     border: 4px solid var(--spider-red);
-    max-width: 80%; 
-    max-height: 80%;
-    overflow-y: auto; 
+    width: 90%;
+    max-width: 520px; 
+    max-height: 82vh; /* Si adatta all'altezza dello schermo del telefono */
+    overflow-y: auto; /* Permette lo scroll fluido se la lettera è lunga */
     z-index: 2000;
-    box-shadow: 0 0 30px rgba(230, 36, 41, 0.8);
+    box-shadow: 0 0 35px rgba(230, 36, 41, 0.8), 0 10px 25px rgba(0, 0, 0, 0.6);
+    -webkit-overflow-scrolling: touch; /* Scroll fluido su iPhone/iOS */
+    line-height: 1.6;
 }
-/* style.css (Aggiunta in fondo al file) */
 
-/* Assicura che l'immagine dentro la carta riempia lo spazio senza deformarsi */
-.card img {
+#letter-modal h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+#letter-modal p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+#letter-modal button {
+    display: block;
+    margin: 20px auto 0 auto;
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Taglia l'immagine per riempire il quadrato senza distorcerla */
-    border-radius: 8px; /* Arrotonda anche gli angoli dell'immagine */
+    max-width: 150px;
+}
+
+
+/* ==========================================
+   📱 MEDIA QUERIES (PER CELLULARI E TABLET)
+   ========================================== */
+
+/* Smartphone (Schermi fino a 600px) */
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    /* Modale della Lettera da telefono */
+    #letter-modal {
+        width: 92%;
+        padding: 22px 18px;
+        max-height: 85vh; /* Lascia un piccolo margine sopra e sotto */
+        border-width: 3px;
+        border-radius: 15px;
+    }
+
+    #letter-modal h2 {
+        font-size: 1.4rem;
+    }
+
+    #letter-modal p {
+        font-size: 0.95rem; /* Font leggermente più piccolo e leggibile da mobile */
+    }
+
+    /* Polaroid da telefono */
+    .timeline {
+        margin: 25px auto;
+        padding-left: 15px;
+    }
+
+    .polaroid-card {
+        padding: 10px 10px 18px 10px;
+        margin: 20px 0;
+    }
+
+    .polaroid-card img {
+        max-height: 300px; /* Evita che una foto occupi tutto lo schermo in verticale */
+    }
+
+    /* Memory Game da telefono */
+    .memory-grid {
+        max-width: 320px;
+        gap: 8px;
+    }
+
+    /* Contatori da telefono */
+    .counters-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+    .counter-box {
+        width: 85%;
+        margin: 5px 0;
+    }
+}
+
+/* Smartphone molto piccoli (Schermi fino a 360px) */
+@media (max-width: 360px) {
+
+    #letter-modal {
+        padding: 16px 14px;
+        font-size: 0.9rem;
+    }
+
+    .memory-grid {
+        max-width: 270px;
+        gap: 6px;
+    }
+
+    .card {
+        border-radius: 6px;
+    }
 }
